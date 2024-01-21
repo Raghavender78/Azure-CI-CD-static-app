@@ -17,8 +17,6 @@ stages:
     displayName: Build Job
     pool:
       vmImage: ubuntu-latest
-    variables:
-    - group: Azure-Static-Web-Apps-jolly-river-042e91b10-variable-group
     steps:
     - checkout: self
       submodules: true
@@ -37,7 +35,7 @@ stages:
       timeoutInMinutes: 5 # task times out in 1 day
       inputs:
         notifyUsers: |
-          sarath@psitrontech.com
+          Raghavender78@Outlook.com
         instructions: 'Please validate the build configuration and resume'
         onTimeout: 'resume'
 
@@ -49,8 +47,6 @@ stages:
     displayName: Deploy to Staging Job
     pool:
       vmImage: ubuntu-latest
-    variables:
-    - group: Azure-Static-Web-Apps-jolly-river-042e91b10-variable-group
     steps:
     - checkout: self
       submodules: true
@@ -75,7 +71,7 @@ stages:
       timeoutInMinutes: 5 # task times out in 1 day
       inputs:
         notifyUsers: |
-          sarath@psitrontech.com
+          Raghavender78@Outlook.com
         instructions: 'Please validate the build configuration and resume'
         onTimeout: 'resume'
 
@@ -87,8 +83,6 @@ stages:
     displayName: Deploy to Production Job
     pool:
       vmImage: ubuntu-latest
-    variables:
-    - group: Azure-Static-Web-Apps-jolly-river-042e91b10-variable-group
     steps:
     - checkout: self
       submodules: true
